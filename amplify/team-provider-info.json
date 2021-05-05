@@ -1,0 +1,51 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-foreclosuremvp-dev-172122-authRole",
+      "UnauthRoleArn": "arn:aws:iam::606980312233:role/amplify-foreclosuremvp-dev-172122-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::606980312233:role/amplify-foreclosuremvp-dev-172122-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-foreclosuremvp-dev-172122-deployment",
+      "UnauthRoleName": "amplify-foreclosuremvp-dev-172122-unauthRole",
+      "StackName": "amplify-foreclosuremvp-dev-172122",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:606980312233:stack/amplify-foreclosuremvp-dev-172122/c6b81880-ab27-11eb-8251-06bf71e45272",
+      "AmplifyAppId": "d38iv2zmzwdyj2"
+    }
+  },
+  "fcmvp": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-foreclosuremvp-fcmvp-122238-authRole",
+      "UnauthRoleArn": "arn:aws:iam::606980312233:role/amplify-foreclosuremvp-fcmvp-122238-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::606980312233:role/amplify-foreclosuremvp-fcmvp-122238-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-foreclosuremvp-fcmvp-122238-deployment",
+      "UnauthRoleName": "amplify-foreclosuremvp-fcmvp-122238-unauthRole",
+      "StackName": "amplify-foreclosuremvp-fcmvp-122238",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:606980312233:stack/amplify-foreclosuremvp-fcmvp-122238/33cfcc70-abc7-11eb-8c14-0a3a0194cfca",
+      "AmplifyAppId": "d38iv2zmzwdyj2"
+    },
+    "categories": {
+      "auth": {
+        "foreclosuremvp87970ac2": {}
+      }
+    }
+  },
+  "amplifyfc": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-foreclosuremvp-amplifyfc-125151-authRole",
+      "UnauthRoleArn": "arn:aws:iam::606980312233:role/amplify-foreclosuremvp-amplifyfc-125151-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::606980312233:role/amplify-foreclosuremvp-amplifyfc-125151-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-foreclosuremvp-amplifyfc-125151-deployment",
+      "UnauthRoleName": "amplify-foreclosuremvp-amplifyfc-125151-unauthRole",
+      "StackName": "amplify-foreclosuremvp-amplifyfc-125151",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:606980312233:stack/amplify-foreclosuremvp-amplifyfc-125151/492d04d0-abcb-11eb-9fdb-020215af40e8",
+      "AmplifyAppId": "d1ig8hefe02am"
+    },
+    "categories": {
+      "auth": {
+        "foreclosuremvp34887151": {}
+      }
+    }
+  }
+}

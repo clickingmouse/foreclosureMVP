@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "foreclosuremvp34887151": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
