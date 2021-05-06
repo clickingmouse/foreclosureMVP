@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Icon, Image } from 'react-native';
 
-import {Auth} from 'aws-amplify';
+import {Auth, formRow} from 'aws-amplify';
 import MemberCard from '../components/MemberCard'
 //import { useEffect } from 'react';
 
@@ -113,7 +113,9 @@ function ProfileContactMenu(){
 
   return(
   <View>
-    <Text style={{fontFamily:'helvetica', color:'#A88663', size:13}}>Contact Us</Text>
+    <View  stytle={{flex:1,flexDirection:'row', justifyContent:'center'}}>
+    <Text style={{fontFamily:'helvetica', color:'#A88663', size:13, textAlign:'center'}}>Contact Us</Text>
+    </View>
   <View
   style={{
     borderBottomColor: 'black',
@@ -157,7 +159,7 @@ checkUser()
     return (
       
       <View style={styles.profileContainer}>
-        <Text>Profile</Text>
+        
 
         <View style={styles.top}>
         <MemberCard />
@@ -179,10 +181,10 @@ checkUser()
 
   const styles = StyleSheet.create({
     profileContainer:{ flex:1,
-      height:'100%',
+      //height:'100%',
       flexDirection:'vertical',
-      padding:19
-      //paddingHorizontal:'19'
+      //padding:19
+      paddingHorizontal:19
       //marginHorizontal:'19'
       //alignItems:'center',
       //width:'95%'
@@ -191,7 +193,7 @@ checkUser()
     top: {
       flex: 1,
       //marginHorizontal:'19',
-      height:'30%',
+      height:'25%',
       backgroundColor: '#fff',
       //alignItems: 'center',
       justifyContent: 'center',
@@ -199,7 +201,7 @@ checkUser()
       //paddingHorizontal:'19'
       
     },
-    middle:{flex:1, height:'40%',backgroundColor: 'skyblue'},
+    middle:{flex:1, height:'45%',backgroundColor: 'skyblue'},
     bottom:{flex:1, height: '30%', backgroundColor: 'steelblue'},
 
     //profileItemTitle:{fontFamily:helvatica},
