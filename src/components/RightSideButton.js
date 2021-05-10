@@ -19,6 +19,8 @@ const propStyles={
     return(
         <TouchableOpacity onPress={props.onPress} style={[styles.RSButtonContainer, propStyles]}
         >
+
+         {props.icon} 
         <Text style={styles.RSButtonText}>{props.title}</Text>
       </TouchableOpacity>
     )

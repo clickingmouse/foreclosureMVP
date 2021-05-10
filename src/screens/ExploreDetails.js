@@ -6,6 +6,11 @@ import * as Font from 'expo-font';
 import { useFonts } from 'expo-font';
 import CapsuleButton from '../components/CapsuleButton'
 import RightSideButton from '../components/RightSideButton'
+
+import DetailPanel from '../components/DetailPanel'
+
+import PropertyHeader from '../components/PropertyHeader'
+
 const GalleryPlaceholder = ()=>{
   return(<View >
 <Image source = {require('../assets/img/placeholders/property.png')}
@@ -23,18 +28,10 @@ const MenuBar = ()=>{
 
 const PropertyDetailLeft =()=>{
   return (
-    <View>    
-      <View style={{flexDirection:'row'}}>
-      <Text>8,600,000</Text>
-    <Text>HKD</Text>
-    <Text>Valuation</Text>
-    </View>
-    <Text>Tseung Kwan O</Text>
-    <View style={{flexDirection:'row'}}>
-      <Text>2 </Text>
-    <Text>2 </Text>
-    <Text>680sqft </Text>
-    </View>
+    <View>
+      <PropertyHeader/>    
+
+
 
     </View>
 
@@ -61,7 +58,7 @@ const PropertyDetailContentTop=()=>{
 }
 
 const PropertyDetailModal=()=>{
-  return(<Text>PropertyDetails</Text>)
+  return(<DetailPanel title='Property Details'/>)
 }
 const PropertyDetailCurrentBid=()=>{  
   return(<Text>CurrentBid</Text>)

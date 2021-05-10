@@ -11,8 +11,8 @@ import Landing from './src/screens/Landing'
 import Amplify, { API, graphqlOperation, Storage } from 'aws-amplify';
 import awsconfig from './src/aws-exports'
 import {AmplifySignOut, withAuthenticator}  from 'aws-amplify-react-native'
-import { useFonts } from 'expo-font';
 
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 //import AppLoading from 'expo-app-loading';
 
 //Amplify.configure(awsconfig)
@@ -27,15 +27,14 @@ Amplify.configure({
  function App() {
 
 
-  let [fontsLoaded] = useFonts({
-    'helvatica':require( './src/assets/fonts/Helvetica.ttc'),
-  });
+
 
   // if (!fontsLoaded) {
   //   return <AppLoading />;
   // } else {
 
   return (
+    <SafeAreaProvider>
     <View style={styles.container}>
       <NavigationContainer>
       <BottomTabNavigator />
@@ -44,6 +43,7 @@ Amplify.configure({
       <StatusBar style="auto" /> 
       */}
     </View>
+    </SafeAreaProvider>
   );
 }
 
