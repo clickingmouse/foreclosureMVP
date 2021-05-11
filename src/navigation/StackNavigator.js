@@ -7,8 +7,8 @@ import ExploreDetails from "../screens/ExploreDetails";
 import Favourites from "../screens/Favourites";
 import MyBids from "../screens/MyBids";
 import Profile from "../screens/Profile";
-
-
+import BackCircleButton from '../components/BackCircleButton'
+import FavoriteCircleButton from '../components/FavoriteCircleButton'
 //import About from "../screens/About";
 
 const Stack = createStackNavigator();
@@ -26,18 +26,29 @@ const MainStackNavigator = () => {
 
 const ExploreStackNavigator = () => {
     return (
-      <Stack.Navigator initialRouteName="ExploreDetails"  screenOptions={screenOptionStyle}>
-        <Stack.Screen name="Explore" component={Explore} />
+      <Stack.Navigator initialRouteName="Explore"  screenOptions={screenOptionStyle}>
+        <Stack.Screen name="Explore" component={Explore} options={{
+    //headerShown: true,
+    headerTransparent: false,
+    title:'',
+    headerLeft: () => (
+      <BackCircleButton  onPress={()=>console.log('pressed')}/>
+    ),
+    headerRight: () => (
+      <Button title='x'/>
+    ),
+  }}/>
+
         <Stack.Screen name="ExploreFilter" component={ExploreFilter} />
         <Stack.Screen name="ExploreDetails" component={ExploreDetails} options={{
     //headerShown: true,
     headerTransparent: true,
     title:'',
     headerLeft: () => (
-      <Button name="bars"  onPress={()=>console.log('pressed')}/>
+      <BackCircleButton  onPress={()=>console.log('pressed')}/>
     ),
     headerRight: () => (
-      <Button name="bars"  onPress={()=>console.log('pressed')}/>
+      <FavoriteCircleButton/>
     ),
   }}/>
       </Stack.Navigator>

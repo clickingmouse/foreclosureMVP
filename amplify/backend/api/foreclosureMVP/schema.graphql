@@ -1,0 +1,64 @@
+# type Blog @model {
+#   id: ID!
+#   name: String!
+#   posts: [Post] @connection(keyName: "byBlog", fields: ["id"])
+# }
+
+# type Post @model @key(name: "byBlog", fields: ["blogID"]) {
+#   id: ID!
+#   title: String!
+#   blogID: ID!
+#   blog: Blog @connection(fields: ["blogID"])
+#   comments: [Comment] @connection(keyName: "byPost", fields: ["id"])
+# }
+
+# type Comment @model @key(name: "byPost", fields: ["postID", "content"]) {
+#   id: ID!
+#   postID: ID!
+#   post: Post @connection(fields: ["postID"])
+#   content: String!
+# }
+
+
+
+type Property @model {
+  id:ID!
+  size:Int
+  bedrooms:Int
+  bathrooms:Int
+  price:Int
+  residential:Boolean
+  publicHousing:Boolean
+  commercial:Boolean
+  industrial:Boolean
+  coverPhoto:String
+  location:String
+  parking:Boolean
+  lease:Boolean
+  name:String
+  propertyDetailsID:ID!
+  propertyDetails: Details @connection(fields:["propertyDetailsID"])
+}
+
+
+
+type Details @ model{
+  id:ID!
+  #post: Post @connection(fields: ["postID"])
+  #property: Property @connection(fields:[propertyID])
+  #propertyID:ID!
+  saleableArea:Int
+  grossArea:Int
+  buildingAge:Int
+  propertyDirection:String
+  propertyView:String
+  photos:AWSJSON
+  video:String
+  VR:String
+  floorPlan:String
+  designPlan:String
+  map:AWSJSON  
+  valuation:Int
+  startingBid:Int
+
+}
