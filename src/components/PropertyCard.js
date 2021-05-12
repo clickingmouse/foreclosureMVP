@@ -52,6 +52,8 @@ const styles=StyleSheet.create({
         height:205,
         width:356,
         flex:1,
-        flexDirection:'column'
+        flexDirection:'column',
+        marginRight:0,
+        backgroundColor:'yellow'
     }
 })
